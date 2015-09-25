@@ -8,17 +8,13 @@
     </parent>
 
     <groupId>upsport.loop</groupId>
-    <artifactId>app</artifactId>
-    <name>Upsport Loop Web Application</name>
+    <artifactId>repository</artifactId>
+    <name>repository</name>
     
     <packaging>pom</packaging>
 
     <modules>
-        <module>build-tools</module>
-        <module>core</module>
-        <module>persistence</module>
-        <module>repository</module>
-        <module>web</module>
+        <module>mysql</module>
     </modules>
 
 </project>

@@ -10,13 +10,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>build-tools</artifactId>
+    <artifactId>core</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>build tools</name>
-    
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <plugin.install>2.4</plugin.install>
-    </properties>
+    <name>core</name>
     
 </project>

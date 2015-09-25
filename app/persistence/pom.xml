@@ -4,19 +4,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <modelVersion>4.0.0</modelVersion>
-    <parent>        
+	<parent>        
         <groupId>upsport.loop</groupId>
         <artifactId>bom</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>build-tools</artifactId>
+    <artifactId>persistence</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>build tools</name>
-    
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <plugin.install>2.4</plugin.install>
-    </properties>
+    <name>persistence</name>
     
 </project>
