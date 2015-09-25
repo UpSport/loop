@@ -38,14 +38,10 @@
         <mockito.version>1.9.5</mockito.version>
         <assertj.version>1.5.0</assertj.version>
         <guava.version>16.0.1</guava.version>
-        <avro.version>1.7.5</avro.version>
         <jodatime.version>2.3</jodatime.version>
         <jansi.version>1.11</jansi.version>
-        <jersey.version>2.12</jersey.version>
+        <jersey.version>1.19</jersey.version>
         <jackson2.version>2.3.2</jackson2.version>
-        <hk2.version>2.3.0</hk2.version>
-        <kafka.version>0.8.0</kafka.version>
-        <ojdl.version>1.1.0-140610.1516</ojdl.version>
         <metrics.version>3.0.2</metrics.version>
 
         <!-- Core Plugins Versions-->
@@ -66,21 +62,16 @@
         <plugin.javadoc>2.9.1</plugin.javadoc>
         <plugin.source>2.2.1</plugin.source>
         <plugin.exec>1.2.1</plugin.exec>
-        <plugin.shade>2.3</plugin.shade>
         <plugin.checkstyle>2.11</plugin.checkstyle>
-        <plugin.avro>1.7.5</plugin.avro>
-        <plugin.hk2>2.3.0</plugin.hk2>
         <plugin.assertj>1.1.0</plugin.assertj>
         <plugin.findbug>2.5.3</plugin.findbug>
         <plugin.sonar>3.7</plugin.sonar>
         <plugin.pmd>3.0.1</plugin.pmd>
-        <plugin.pitest>0.30</plugin.pitest>
         <plugin.site>3.3</plugin.site>
         <plugin.license>2.5</plugin.license>
         <plugin.licenses>1.5</plugin.licenses>
         <plugin.buildhepler>1.8</plugin.buildhepler>
         <plugin.reports>2.7</plugin.reports>
-        <zookeeper.version>3.4.6</zookeeper.version>
 
         <jstl.version>1.2</jstl.version>
         <servlet.version>3.0.1</servlet.version>
@@ -170,33 +161,10 @@
                 <version>${jackson2.version}</version>
                 <scope>provided</scope>
             </dependency>
-
-            <!-- Jersey 
             <dependency>
-                <groupId>org.glassfish.jersey.core</groupId>
-                <artifactId>jersey-client</artifactId>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-server</artifactId>
                 <version>${jersey.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jersey.containers</groupId>
-                <artifactId>jersey-container-servlet</artifactId>
-                <version>${jersey.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jersey.media</groupId>
-                <artifactId>jersey-media-json-jackson</artifactId>
-                <version>${jersey.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            -->
-            <dependency>
-                <groupId>org.glassfish.jersey</groupId>
-                <artifactId>jersey-bom</artifactId>
-                <version>${jersey.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
             <!-- Hibernate -->
             <dependency>
