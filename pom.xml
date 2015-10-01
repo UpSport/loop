@@ -29,8 +29,8 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.version>3.0.3</maven.version>
-        <jdk-source>1.8</jdk-source>
-        <jdk-target>1.8</jdk-target>
+        <jdk-source>1.7</jdk-source>
+        <jdk-target>1.7</jdk-target>
 
         <!-- Core Dependency Versions -->
         <slf4j.version>1.7.5</slf4j.version>
@@ -202,7 +202,7 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.10</version>
+                <version>5.1.28</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -262,9 +262,11 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
+            <!--
             <plugin>
                 <artifactId>maven-checkstyle-plugin</artifactId>
             </plugin>
+            -->
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
             </plugin>
@@ -303,9 +305,11 @@
                         <optimize>true</optimize>
                         <meminitial>512m</meminitial>
                         <maxmem>1024m</maxmem>
+                        <!-- 
                         <compilerArguments>
                             <endorseddirs>${endorsed.dir}</endorseddirs>
                         </compilerArguments>
+                         -->
                     </configuration>
                 </plugin>
                 <plugin>
@@ -480,6 +484,7 @@
                         <forkMode>once</forkMode>
                     </configuration>
                 </plugin>
+                <!--
                 <plugin>
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>${plugin.checkstyle}</version>
@@ -508,6 +513,7 @@
                         <configLocation>checkstyle.xml</configLocation>
                     </configuration>
                 </plugin>
+                -->
                 <plugin>
                     <artifactId>maven-javadoc-plugin</artifactId>
                     <version>${plugin.javadoc}</version>
@@ -569,6 +575,7 @@
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>${plugin.surefire}</version>
             </plugin>
+            <!--
             <plugin>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>${plugin.checkstyle}</version>
@@ -586,6 +593,7 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+            -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
