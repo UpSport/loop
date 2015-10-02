@@ -16,7 +16,7 @@ public class Connector {
         Statement st = null;
         ResultSet rs = null;
 
-        String url = "jdbc:mysql://162.216.17.47:3306/loop?autoReconnect=true&failOverReadOnly=false&maxReconnects=10";
+        String url = "jdbc:mysql://162.216.17.47:3306/loop";
         String user = "root";
         String password = "600191";
 
@@ -25,11 +25,11 @@ public class Connector {
 
             con = DriverManager.getConnection(url, user, password);
             st = con.createStatement();
-            // rs = st.executeQuery("SELECT * FROM EVENT");
-            //
-            // if (rs.next()) {
-            // System.out.println(rs.getString(1));
-            // }
+             rs = st.executeQuery("SELECT * FROM event");
+            
+             if (rs.next()) {
+                 System.out.println(rs.getString(1));
+             }
 
         } catch (SQLException ex) {
             Logger lgr = Logger.getLogger(Connector.class.getName());
