@@ -52,7 +52,7 @@ public class Upload {
                     nullable = false, updatable = false) })
     private Set<Product> products;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "upload", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "ratingId.upload", cascade = CascadeType.ALL)
     private Set<Rating> ratings;
 
     public long getId() {

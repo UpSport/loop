@@ -30,7 +30,7 @@ public class User {
     @Column(name = "user_password")
     private String password;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "ratingId.user", cascade = CascadeType.ALL)
     private Set<Rating> ratings;
 
     public long getId() {

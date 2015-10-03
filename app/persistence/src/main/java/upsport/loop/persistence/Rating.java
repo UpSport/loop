@@ -2,6 +2,7 @@ package upsport.loop.persistence;
 
 import javax.persistence.AssociationOverride;
 import javax.persistence.AssociationOverrides;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
@@ -9,14 +10,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "rating_user_upload")
 @AssociationOverrides({
-        @AssociationOverride(name = "user",
+        @AssociationOverride(name = "ratingId.user",
                 joinColumns = @JoinColumn(name = "user_id")),
-        @AssociationOverride(name = "upload",
+        @AssociationOverride(name = "ratingId.upload",
                 joinColumns = @JoinColumn(name = "upload_id")) })
 public class Rating {
 
     private int rating;
-    private RatingId RatingId;
+
+    @EmbeddedId
+    private RatingId ratingId;
 
     public int getRating() {
         return rating;
@@ -27,10 +30,10 @@ public class Rating {
     }
 
     public RatingId getRatingId() {
-        return RatingId;
+        return ratingId;
     }
 
     public void setRatingId(RatingId ratingId) {
-        RatingId = ratingId;
+        this.ratingId = ratingId;
     }
 }

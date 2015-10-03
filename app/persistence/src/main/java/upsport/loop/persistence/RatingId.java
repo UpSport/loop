@@ -4,7 +4,7 @@ import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 
 @Embeddable
-public class RatingId {
+public class RatingId implements java.io.Serializable {
 
     @ManyToOne
     private Upload upload;
