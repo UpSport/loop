@@ -12,22 +12,22 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "event")
-public class Event {
+@Table(name = "company")
+public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "event_id")
+    @Column(name = "company_id")
     private long id;
 
-    @Column(name = "event_name")
+    @Column(name = "company_name")
     private String name;
 
-    @Column(name = "event_description")
+    @Column(name = "company_description")
     private String description;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "event")
-    private Set<Upload> uploads;
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "company")
+    private Set<Product> products;
 
     public long getId() {
         return id;
@@ -53,12 +53,12 @@ public class Event {
         this.description = description;
     }
 
-    public Set<Upload> getUploads() {
-        return uploads;
+    public Set<Product> getProducts() {
+        return products;
     }
 
-    public void setUploads(Set<Upload> uploads) {
-        this.uploads = uploads;
+    public void setProducts(Set<Product> products) {
+        this.products = products;
     }
 
 }

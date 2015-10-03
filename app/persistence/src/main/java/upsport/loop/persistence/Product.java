@@ -2,31 +2,43 @@ package upsport.loop.persistence;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "event")
-public class Event {
+@Table(name = "product")
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "event_id")
+    @Column(name = "product_id")
     private long id;
 
-    @Column(name = "event_name")
+    @Column(name = "product_name")
     private String name;
 
-    @Column(name = "event_description")
+    @Column(name = "product_description")
     private String description;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "event")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "company_id", nullable = false)
+    private Company company;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "relation_upload_product", joinColumns = {
+            @JoinColumn(name = "product_id", nullable = false, updatable = false) },
+            inverseJoinColumns = { @JoinColumn(name = "upload_id",
+                    nullable = false, updatable = false) })
     private Set<Upload> uploads;
 
     public long getId() {
@@ -51,6 +63,14 @@ public class Event {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public Set<Upload> getUploads() {
