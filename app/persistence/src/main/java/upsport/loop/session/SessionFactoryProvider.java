@@ -5,13 +5,13 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import upsport.loop.persistence.Company;
-import upsport.loop.persistence.Event;
-import upsport.loop.persistence.Product;
-import upsport.loop.persistence.Rating;
-import upsport.loop.persistence.RatingId;
-import upsport.loop.persistence.Upload;
-import upsport.loop.persistence.User;
+import upsport.loop.model.Company;
+import upsport.loop.model.Event;
+import upsport.loop.model.Product;
+import upsport.loop.model.Rating;
+import upsport.loop.model.RatingId;
+import upsport.loop.model.Upload;
+import upsport.loop.model.User;
 
 public class SessionFactoryProvider {
 

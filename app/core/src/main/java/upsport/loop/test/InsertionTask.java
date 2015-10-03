@@ -6,19 +6,19 @@ import java.util.Set;
 
 import org.hibernate.Session;
 
-import upsport.loop.persistence.Company;
-import upsport.loop.persistence.Event;
-import upsport.loop.persistence.Product;
-import upsport.loop.persistence.Rating;
-import upsport.loop.persistence.RatingId;
-import upsport.loop.persistence.Upload;
-import upsport.loop.persistence.User;
-import upsport.loop.transaction.Task;
+import upsport.loop.model.Company;
+import upsport.loop.model.Event;
+import upsport.loop.model.Product;
+import upsport.loop.model.Rating;
+import upsport.loop.model.RatingId;
+import upsport.loop.model.Upload;
+import upsport.loop.model.User;
+import upsport.loop.transaction.Setter;
 
-public class InsertionTask implements Task {
+public class InsertionTask implements Setter {
 
     @Override
-    public void run(Session session) {
+    public void set(Session session) {
         // event
         Event event = new Event();
         event.setName("Test");
@@ -56,9 +56,8 @@ public class InsertionTask implements Task {
         ratingId.setUpload(upload);
         ratingId.setUser(user);
 
-        Rating rating = new Rating();
+        Rating rating = new Rating(ratingId);
         rating.setRating(5);
-        rating.setRatingId(ratingId);
 
         session.saveOrUpdate(event);
         session.saveOrUpdate(company);

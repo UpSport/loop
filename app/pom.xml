@@ -16,8 +16,8 @@
     <modules>
         <module>build-tools</module>
         <module>core</module>
+        <module>model</module>
         <module>persistence</module>
-        <module>repository</module>
         <module>web</module>
     </modules>
 

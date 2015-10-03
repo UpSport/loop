@@ -11,11 +11,16 @@ public class TaskExecutor {
         this.session = session;
     }
 
-    public void execute(Task task) {
+    public void run(Setter setter) {
         Transaction transaction = session.beginTransaction();
 
-        task.run(session);
+        setter.set(session);
 
         transaction.commit();
     }
+
+    public <T> T call(Getter<T> getter) {
+        return getter.get(session);
+    }
+
 }

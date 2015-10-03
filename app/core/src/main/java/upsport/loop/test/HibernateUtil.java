@@ -6,7 +6,7 @@ public class HibernateUtil {
 
     protected static void addUp() {
         InsertionTask task = new InsertionTask();
-        TransientSessionExecutor.execute(task);
+        TransientSessionExecutor.run(task);
     }
 
     protected static void query() {
