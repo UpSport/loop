@@ -1,5 +1,6 @@
 package upsport.loop.model;
 
+import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -25,6 +26,9 @@ public class Event {
 
     @Column(name = "event_description")
     private String description;
+
+    @Column(name = "event_time")
+    private Date time;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "event")
     private Set<Upload> uploads;
@@ -58,6 +62,14 @@ public class Event {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
     }
 
     public Set<Upload> getUploads() {

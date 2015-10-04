@@ -24,13 +24,12 @@ public class MainTester {
             System.out.println(upload.getId() + "-" + upload.getName() + "-" + upload.getAverageRating());
         }
 
-        for (Upload upload : stat.getTopNUploadByEventId(10, 40)) {
+        for (Upload upload : stat.getTopNUploadByEventId(10, 60)) {
             System.out.println(upload.getId() + "-" + upload.getName() + "-" + upload.getAverageRating());
         }
 
-        Event event = new Event(40);
-        for (Upload upload : stat.getTopNUploadByEvent(10, event)) {
-            System.out.println(upload.getId() + "-" + upload.getName() + "-" + upload.getAverageRating());
+        for (Event event : stat.getTopNEvent(5)) {
+            System.out.println(event.getName() + "-" + event.getTime());
         }
     }
 
@@ -38,7 +37,7 @@ public class MainTester {
         sessionFactory = SessionFactoryProvider.getSessionFactory();
         transientSessionExecutor = new TransientSessionExecutor(sessionFactory);
 
-        // addUp();
+        addUp();
         query();
 
         sessionFactory.close();

@@ -23,6 +23,7 @@ public class InsertionTask implements Setter {
         Event event = new Event();
         event.setName("Test");
         event.setDescription("Test");
+        event.setTime(new Date(System.currentTimeMillis()));
 
         // company
         Company company = new Company();
