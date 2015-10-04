@@ -9,8 +9,14 @@ import upsport.loop.transaction.Setter;
 
 public class CompanyBusiness {
 
+    private TransientSessionExecutor transientSessionExecutor;
+
+    public CompanyBusiness(TransientSessionExecutor transientSessionExecutor) {
+        this.transientSessionExecutor = transientSessionExecutor;
+    }
+
     public void save(final Company company) {
-        TransientSessionExecutor.run(new Setter() {
+        transientSessionExecutor.run(new Setter() {
             @Override
             public void set(Session session) {
                 session.save(company);
@@ -19,7 +25,7 @@ public class CompanyBusiness {
     }
 
     public void update(final Company company) {
-        TransientSessionExecutor.run(new Setter() {
+        transientSessionExecutor.run(new Setter() {
             @Override
             public void set(Session session) {
                 session.update(company);
@@ -28,7 +34,7 @@ public class CompanyBusiness {
     }
 
     public void delete(final Company company) {
-        TransientSessionExecutor.run(new Setter() {
+        transientSessionExecutor.run(new Setter() {
             @Override
             public void set(Session session) {
                 session.delete(company);
@@ -42,7 +48,7 @@ public class CompanyBusiness {
     }
 
     public void getById(final long id) {
-        TransientSessionExecutor.call(new Getter<Company>() {
+        transientSessionExecutor.call(new Getter<Company>() {
             @Override
             public Company get(Session session) {
                 return session.get(Company.class, id);

@@ -55,6 +55,8 @@ public class Upload {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "id.upload", cascade = CascadeType.ALL)
     private Set<Rating> ratings;
 
+    private double averageRating;
+
     public Upload(long id) {
         this.id = id;
     }
@@ -132,6 +134,14 @@ public class Upload {
 
     public void setRatings(Set<Rating> ratings) {
         this.ratings = ratings;
+    }
+
+    public double getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(double averageRating) {
+        this.averageRating = averageRating;
     }
 
 }

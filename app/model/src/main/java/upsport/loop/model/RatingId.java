@@ -12,12 +12,12 @@ public class RatingId implements java.io.Serializable {
     @ManyToOne
     private User user;
 
+    public RatingId() {
+    }
+
     public RatingId(Upload upload, User user) {
         this.upload = upload;
         this.user = user;
-    }
-
-    public RatingId() {
     }
 
     public Upload getUpload() {

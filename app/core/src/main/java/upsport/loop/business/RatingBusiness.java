@@ -12,8 +12,14 @@ import upsport.loop.transaction.Setter;
 
 public class RatingBusiness {
 
+    private TransientSessionExecutor transientSessionExecutor;
+
+    public RatingBusiness(TransientSessionExecutor transientSessionExecutor) {
+        this.transientSessionExecutor = transientSessionExecutor;
+    }
+
     public void save(final Rating rating) {
-        TransientSessionExecutor.run(new Setter() {
+        transientSessionExecutor.run(new Setter() {
             @Override
             public void set(Session session) {
                 session.save(rating);
@@ -22,7 +28,7 @@ public class RatingBusiness {
     }
 
     public void update(final Rating rating) {
-        TransientSessionExecutor.run(new Setter() {
+        transientSessionExecutor.run(new Setter() {
             @Override
             public void set(Session session) {
                 session.update(rating);
@@ -31,7 +37,7 @@ public class RatingBusiness {
     }
 
     public void delete(final Rating rating) {
-        TransientSessionExecutor.run(new Setter() {
+        transientSessionExecutor.run(new Setter() {
             @Override
             public void set(Session session) {
                 session.delete(rating);
@@ -47,7 +53,7 @@ public class RatingBusiness {
 
     // TODO
     public void getById(final long id) {
-        TransientSessionExecutor.call(new Getter<Rating>() {
+        transientSessionExecutor.call(new Getter<Rating>() {
             @Override
             public Rating get(Session session) {
                 return session.get(Rating.class, id);

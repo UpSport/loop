@@ -9,8 +9,14 @@ import upsport.loop.transaction.Setter;
 
 public class UploadBusiness {
 
+    private TransientSessionExecutor transientSessionExecutor;
+
+    public UploadBusiness(TransientSessionExecutor transientSessionExecutor) {
+        this.transientSessionExecutor = transientSessionExecutor;
+    }
+
     public void save(final Upload upload) {
-        TransientSessionExecutor.run(new Setter() {
+        transientSessionExecutor.run(new Setter() {
             @Override
             public void set(Session session) {
                 session.save(upload);
@@ -19,7 +25,7 @@ public class UploadBusiness {
     }
 
     public void update(final Upload upload) {
-        TransientSessionExecutor.run(new Setter() {
+        transientSessionExecutor.run(new Setter() {
             @Override
             public void set(Session session) {
                 session.update(upload);
@@ -28,7 +34,7 @@ public class UploadBusiness {
     }
 
     public void delete(final Upload upload) {
-        TransientSessionExecutor.run(new Setter() {
+        transientSessionExecutor.run(new Setter() {
             @Override
             public void set(Session session) {
                 session.delete(upload);
@@ -42,7 +48,7 @@ public class UploadBusiness {
     }
 
     public void getById(final long id) {
-        TransientSessionExecutor.call(new Getter<Upload>() {
+        transientSessionExecutor.call(new Getter<Upload>() {
             @Override
             public Upload get(Session session) {
                 return session.get(Upload.class, id);
