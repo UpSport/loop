@@ -1,0 +1,8 @@
+13:43:12.159 [main] INFO  main - Configuring Server
+13:43:12.812 [main] INFO  main - Creating Server
+13:43:14.873 [main] INFO  org.hibernate.validator.util.Version - Hibernate Validator 4.2.0.Final
+13:59:56.631 [main] INFO  main - Configuring Server
+13:59:56.940 [main] INFO  main - Creating Server
+13:59:58.120 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+13:59:58.901 [main] INFO  main - Starting Server
+13:59:59.033 [main] INFO  main - Server Started at => http://localhost:53234/api
