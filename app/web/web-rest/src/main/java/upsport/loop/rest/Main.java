@@ -1,7 +1,5 @@
 package upsport.loop.rest;
 
-//import com.acme.ecards.api.kernal.ServiceKernal;
-
 import static java.lang.Runtime.getRuntime;
 import static java.lang.System.exit;
 import static java.net.URI.create;

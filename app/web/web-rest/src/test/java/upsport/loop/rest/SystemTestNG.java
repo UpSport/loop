@@ -88,7 +88,7 @@ public class SystemTestNG extends JerseyTestNg.ContainerPerClassTest {
 
     @Test
     public void givenValidGreetingBirthdayGreetingsResourceShouldReturnOK() {
-        User greeting = new User("firstname", "lastname", "saden1@gmail.com");
+        User greeting = new User("firstname", "lastname", "upsport@gmail.com");
         Response response = target("greetings")
                 .path("birthday")
                 .request()
@@ -99,7 +99,7 @@ public class SystemTestNG extends JerseyTestNg.ContainerPerClassTest {
 
     @Test
     public void givenValidGreetingHolidaysGreetingsResourceShouldReturnOK() {
-        User greeting = new User("firstname", "lastname", "saden1@gmail.com");
+        User greeting = new User("firstname", "lastname", "upsport@gmail.com");
         Response response = target("greetings")
                 .path("holidays")
                 .request()
@@ -110,7 +110,7 @@ public class SystemTestNG extends JerseyTestNg.ContainerPerClassTest {
 
     @Test
     public void givenInvalidGreetingTypeGreetingsResourceShouldReturnBadRequest() {
-        User greeting = new User("firstname", "lastname", "saden1@gmail.com");
+        User greeting = new User("firstname", "lastname", "upsport@gmail.com");
         Response response = target("greetings")
                 .path("invalid")
                 .request()
