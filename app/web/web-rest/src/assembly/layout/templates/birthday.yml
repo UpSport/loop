@@ -4,8 +4,6 @@ subject: "Happy Birthday {{context.firstName}}!"
 plain: |
     Happy Birthday {{context.firstName}}! I hope this is the beginning of
     your greatest, most wonderful year ever!
-
-    -Acme Team
 html: |
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
@@ -169,9 +167,6 @@ html: |
                                         <p>
                                             Happy Birthday {{context.firstName}}! I hope this is the beginning of
                                             your greatest, most wonderful year ever!
-                                        </p>
-                                        <p>
-                                            <i>-Acme Team</i>
                                         </p>
                                     </td>
                                 </tr>

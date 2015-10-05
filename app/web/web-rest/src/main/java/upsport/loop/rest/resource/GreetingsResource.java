@@ -41,14 +41,17 @@ public class GreetingsResource {
         String email = user.getEmail();
         String personal = format("%s %s", user.getFirstName(), user.getLastName());
 
-//        Map<String, Object> context = ImmutableMap.<String, Object> builder()
-//                .put("email", email)
-//                .put("firstName", user.getFirstName())
-//                .put("lastName", user.getLastName())
-//                .build();
-//
-//        EmailMessage message = new EmailMessage(email, personal, greetingType, context);
-//        emailService.send(message);
+        System.out.println("test");
+
+        // Map<String, Object> context = ImmutableMap.<String, Object> builder()
+        // .put("email", email)
+        // .put("firstName", user.getFirstName())
+        // .put("lastName", user.getLastName())
+        // .build();
+        //
+        // EmailMessage message = new EmailMessage(email, personal,
+        // greetingType, context);
+        // emailService.send(message);
         asyncResponse.resume(ok());
     }
 }

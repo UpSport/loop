@@ -1,5 +1,5 @@
 ## Requirement
-The following requirements exist for running eCards application:
+The following requirements exist for running UpSport application:
 * Java 1.8 Runtime Environment
 
 ## Distribution Layout

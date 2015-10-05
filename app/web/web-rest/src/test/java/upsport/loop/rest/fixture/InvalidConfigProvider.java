@@ -1,7 +1,5 @@
 package upsport.loop.rest.fixture;
 
-import static java.util.Collections.unmodifiableMap;
-
 import java.io.InputStream;
 import java.util.Map;
 
@@ -29,7 +27,7 @@ public class InvalidConfigProvider implements Factory<Map<String, Object>> {
         // load config.yml from the classpath
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("invalid-config.yml");
 
-        return unmodifiableMap(yaml.loadAs(inputStream, Map.class));
+        return yaml.loadAs(inputStream, Map.class);
     }
 
     @Override

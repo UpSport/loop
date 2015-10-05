@@ -2,7 +2,8 @@
 
 base_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 cd $base_dir
-app_jar=rest.jar
+pwd
+app_jar=web-rest-1.0-SNAPSHOT.jar
 
 # Which java to use
 if [ -z "$JAVA_HOME" ]; then

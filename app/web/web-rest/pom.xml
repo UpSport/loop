@@ -44,7 +44,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>../libs</classpathPrefix>
-                            <mainClass>com.acme.ecards.rest.Main</mainClass>
+                            <mainClass>upsport.loop.rest.Main</mainClass>
                         </manifest>
                         <manifestEntries>
                             <Class-Path>../conf/ ../templates/ ../libs</Class-Path>

@@ -31,6 +31,13 @@ limitations under the License.
             </includes>
         </fileSet>
         <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory>bin/</outputDirectory>
+            <includes>
+                <include>web-rest-1.0-SNAPSHOT.jar</include>
+            </includes>
+        </fileSet>        
+        <fileSet>
             <directory>${project.basedir}/src/assembly/layout</directory>
             <outputDirectory></outputDirectory>
             <filtered>true</filtered>
@@ -45,13 +52,13 @@ limitations under the License.
             <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
             <fileMode>755</fileMode>
             <includes>
-                <include>com.acme.ecards:rest</include>
+                <include>upsport.loop:rest</include>
             </includes>
-        </dependencySet>
+        </dependencySet>       
         <dependencySet>
             <outputDirectory>/libs</outputDirectory>
             <excludes>
-                <exclude>com.acme.ecards:rest</exclude>
+                <exclude>upsport.loop:rest</exclude>
             </excludes>
         </dependencySet>
     </dependencySets>
