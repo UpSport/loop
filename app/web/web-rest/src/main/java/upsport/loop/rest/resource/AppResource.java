@@ -23,6 +23,6 @@ public class AppResource {
     @Produces(APPLICATION_JSON)
     @ManagedAsync
     public void post(@Suspended final AsyncResponse asyncResponse) {
-        asyncResponse.resume(ok("Test").build());
+        asyncResponse.resume(ok("Reached App Resource!").build());
     }
 }
