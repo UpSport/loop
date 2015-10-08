@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 
 public class Jackson2Feature implements Feature {
 
@@ -19,19 +20,20 @@ public class Jackson2Feature implements Feature {
 
         if (!isJacksonRegistered) {
             ObjectMapper mapper = new ObjectMapper()
-                    .configure(MapperFeature.USE_ANNOTATIONS, true)
-                    .configure(MapperFeature.AUTO_DETECT_GETTERS, true)
-                    .configure(MapperFeature.AUTO_DETECT_IS_GETTERS, true)
-                    .configure(MapperFeature.AUTO_DETECT_SETTERS, true)
-                    .configure(MapperFeature.REQUIRE_SETTERS_FOR_GETTERS, false)
-                    .configure(MapperFeature.AUTO_DETECT_FIELDS, true)
-                    .configure(SerializationFeature.INDENT_OUTPUT, false)
-                    .configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, true)
-                    .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
-                    .configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true)
-                    .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-                    .configure(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES, false)
-                    .setSerializationInclusion(JsonInclude.Include.NON_NULL);
+                .registerModule(new Hibernate5Module())
+                .configure(MapperFeature.USE_ANNOTATIONS, true)
+                .configure(MapperFeature.AUTO_DETECT_GETTERS, true)
+                .configure(MapperFeature.AUTO_DETECT_IS_GETTERS, true)
+                .configure(MapperFeature.AUTO_DETECT_SETTERS, true)
+                .configure(MapperFeature.REQUIRE_SETTERS_FOR_GETTERS, false)
+                .configure(MapperFeature.AUTO_DETECT_FIELDS, true)
+                .configure(SerializationFeature.INDENT_OUTPUT, false)
+                .configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, true)
+                .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
+                .configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true)
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+                .configure(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES, false)
+                .setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
             Jackson2ContextResolver resolver = new Jackson2ContextResolver(mapper);
             context.register(resolver);

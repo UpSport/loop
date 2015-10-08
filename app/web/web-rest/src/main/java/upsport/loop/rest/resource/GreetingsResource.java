@@ -21,7 +21,7 @@ import jersey.repackaged.com.google.common.collect.ImmutableMap;
 
 import org.glassfish.jersey.server.ManagedAsync;
 
-import upsport.loop.rest.model.User;
+import upsport.loop.model.User;
 
 @Path("greetings")
 public class GreetingsResource {
@@ -38,8 +38,8 @@ public class GreetingsResource {
     public void post(@Suspended final AsyncResponse asyncResponse,
             @PathParam("greetingType") final String greetingType,
             @Valid final User user) {
-        String email = user.getEmail();
-        String personal = format("%s %s", user.getFirstName(), user.getLastName());
+        // String email = user.getEmail();
+        // String personal = format("%s %s", user.getFirstName(), user.getLastName());
 
         System.out.println("test");
 
