@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 
 public class Jackson2Feature implements Feature {
 
@@ -20,7 +19,6 @@ public class Jackson2Feature implements Feature {
 
         if (!isJacksonRegistered) {
             ObjectMapper mapper = new ObjectMapper()
-                    .registerModule(new Hibernate5Module())
                     .configure(MapperFeature.USE_ANNOTATIONS, true)
                     .configure(MapperFeature.AUTO_DETECT_GETTERS, true)
                     .configure(MapperFeature.AUTO_DETECT_IS_GETTERS, true)

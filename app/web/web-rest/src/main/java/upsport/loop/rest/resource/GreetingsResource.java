@@ -1,8 +1,11 @@
 package upsport.loop.rest.resource;
 
+import static java.lang.String.format;
 import static javax.ws.rs.core.MediaType.APPLICATION_FORM_URLENCODED;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.Response.ok;
+
+import java.util.Map;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -14,9 +17,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.container.AsyncResponse;
 import javax.ws.rs.container.Suspended;
 
+import jersey.repackaged.com.google.common.collect.ImmutableMap;
+
 import org.glassfish.jersey.server.ManagedAsync;
 
-import upsport.loop.model.User;
+import upsport.loop.rest.model.User;
 
 @Path("greetings")
 public class GreetingsResource {
@@ -33,9 +38,8 @@ public class GreetingsResource {
     public void post(@Suspended final AsyncResponse asyncResponse,
             @PathParam("greetingType") final String greetingType,
             @Valid final User user) {
-        // String email = user.getEmail();
-        // String personal = format("%s %s", user.getFirstName(),
-        // user.getLastName());
+        String email = user.getEmail();
+        String personal = format("%s %s", user.getFirstName(), user.getLastName());
 
         System.out.println("test");
 
