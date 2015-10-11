@@ -13,8 +13,8 @@ import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.glassfish.jersey.test.JerseyTestNg;
 import org.testng.annotations.Test;
 
+import upsport.loop.model.User;
 import upsport.loop.rest.fixture.InvalidConfigProvider;
-import upsport.loop.rest.model.User;
 
 public class FailoverSystemTestNG extends JerseyTestNg.ContainerPerClassTest {
 

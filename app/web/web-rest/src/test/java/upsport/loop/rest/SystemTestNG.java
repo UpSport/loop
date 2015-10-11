@@ -1,26 +1,23 @@
 package upsport.loop.rest;
 
+import static javax.ws.rs.client.Entity.entity;
+import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
+import static javax.ws.rs.core.Response.Status.OK;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.util.Map;
 
 import javax.ws.rs.client.Entity;
-
-import static javax.ws.rs.client.Entity.entity;
-
 import javax.ws.rs.core.Application;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
-import static javax.ws.rs.core.Response.Status.OK;
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.glassfish.jersey.test.JerseyTestNg;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import upsport.loop.rest.ApiApplication;
-import upsport.loop.rest.model.User;
+import upsport.loop.model.User;
 
 public class SystemTestNG extends JerseyTestNg.ContainerPerClassTest {
 

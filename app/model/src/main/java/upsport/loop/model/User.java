@@ -41,6 +41,10 @@ public class User {
 
     }
 
+    public User(String firstName, String lastName, String email2) {
+        // TODO Auto-generated constructor stub
+    }
+
     public long getId() {
         return id;
     }
