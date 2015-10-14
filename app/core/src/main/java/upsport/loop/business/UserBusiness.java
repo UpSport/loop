@@ -49,8 +49,8 @@ public class UserBusiness {
         delete(user);
     }
 
-    public void getById(final long id) {
-        transientSessionExecutor.call(new Getter<User>() {
+    public User getById(final long id) {
+        return transientSessionExecutor.call(new Getter<User>() {
             @Override
             public User get(Session session) {
                 return session.get(User.class, id);

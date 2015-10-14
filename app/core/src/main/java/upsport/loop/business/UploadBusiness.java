@@ -1,5 +1,7 @@
 package upsport.loop.business;
 
+import java.util.List;
+
 import org.hibernate.Session;
 
 import upsport.loop.model.Upload;
@@ -47,11 +49,20 @@ public class UploadBusiness {
         delete(upload);
     }
 
-    public void getById(final long id) {
-        transientSessionExecutor.call(new Getter<Upload>() {
+    public Upload getById(final long id) {
+        return transientSessionExecutor.call(new Getter<Upload>() {
             @Override
             public Upload get(Session session) {
                 return session.get(Upload.class, id);
+            }
+        });
+    }
+
+    public List<Upload> getAll() {
+        return transientSessionExecutor.call(new Getter<List<Upload>>() {
+            @Override
+            public List<Upload> get(Session session) {
+                return session.createCriteria(Upload.class).list();
             }
         });
     }
