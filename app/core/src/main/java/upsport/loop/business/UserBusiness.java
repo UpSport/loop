@@ -1,5 +1,7 @@
 package upsport.loop.business;
 
+import java.util.List;
+
 import org.hibernate.Session;
 
 import upsport.loop.model.User;
@@ -52,6 +54,15 @@ public class UserBusiness {
             @Override
             public User get(Session session) {
                 return session.get(User.class, id);
+            }
+        });
+    }
+
+    public List<User> getAll() {
+        return transientSessionExecutor.call(new Getter<List<User>>() {
+            @Override
+            public List<User> get(Session session) {
+                return session.createCriteria(User.class).list();
             }
         });
     }

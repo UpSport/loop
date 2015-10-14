@@ -37,8 +37,8 @@ public class MainTester {
         sessionFactory = SessionFactoryProvider.getSessionFactory();
         transientSessionExecutor = new TransientSessionExecutor(sessionFactory);
 
-        addUp();
-        query();
+//        addUp();
+//        query();
 
         sessionFactory.close();
     }

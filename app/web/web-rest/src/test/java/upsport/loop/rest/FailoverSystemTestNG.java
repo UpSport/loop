@@ -34,7 +34,7 @@ public class FailoverSystemTestNG extends JerseyTestNg.ContainerPerClassTest {
 
     @Test(priority = 1)
     public void givenValidGreetingBirthdayGreetingsResourceShouldReturnServiceUnavailable() {
-        User greeting = new User("firstname", "lastname", "upsport@gmail.com");
+        User greeting = new User(1);
         Response response = target("greetings")
                 .path("birthday")
                 .request()
@@ -45,7 +45,7 @@ public class FailoverSystemTestNG extends JerseyTestNg.ContainerPerClassTest {
 
     @Test(priority = 1)
     public void givenValidGreetingHolidaysGreetingsResourceShouldReturnOK() {
-        User greeting = new User("firstname", "lastname", "upsport@gmail.com");
+        User greeting = new User(1);
         Response response = target("greetings")
                 .path("holidays")
                 .request()
