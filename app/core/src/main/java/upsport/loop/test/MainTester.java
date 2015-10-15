@@ -34,11 +34,11 @@ public class MainTester {
     }
 
     public static void main(String args[]) throws Exception {
-        sessionFactory = SessionFactoryProvider.getSessionFactory();
+        sessionFactory = new SessionFactoryProvider().provide();
         transientSessionExecutor = new TransientSessionExecutor(sessionFactory);
 
-//        addUp();
-//        query();
+        // addUp();
+        // query();
 
         sessionFactory.close();
     }

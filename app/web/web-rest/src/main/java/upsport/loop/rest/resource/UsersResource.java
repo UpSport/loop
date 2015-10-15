@@ -31,7 +31,7 @@ public class UsersResource {
         this.userBusiness = userBusiness;
     }
 
-    @Path("new")
+    @Path("create")
     @POST
     @Consumes({ APPLICATION_FORM_URLENCODED, APPLICATION_JSON })
     @Produces(APPLICATION_JSON)

@@ -10,6 +10,9 @@ import upsport.loop.transaction.Getter;
 import upsport.loop.transaction.Setter;
 import upsport.loop.transaction.TaskExecutor;
 
+// TODO injection: maven-jar-plugin generated jar dependency sequence had a bug
+// core->persistence, while persistence is after core, so moved all DI into core at this moment,
+// should research on how to make everything into DI while able to debug in IDE, and able to run app in CLI.
 public class TransientSessionExecutor {
 
     private SessionFactory sessionFactory;

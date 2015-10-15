@@ -21,128 +21,136 @@ import javax.persistence.Table;
 @Table(name = "upload")
 public class Upload {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "upload_id")
-    private long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "upload_id")
+	private long id;
 
-    @Column(name = "upload_name")
-    private String name;
+	@Column(name = "upload_name")
+	private String name;
 
-    @Column(name = "upload_time")
-    private Date time;
+	@Column(name = "upload_time")
+	private Date time;
 
-    @Column(name = "upload_type")
-    private String type;
+	@Column(name = "upload_type")
+	private String type;
 
-    @Column(name = "sport_category")
-    private String category;
+	@Column(name = "sport_category")
+	private String category;
 
-    @Column(name = "upload_path")
-    private String path;
+	@Column(name = "upload_path")
+	private String path;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "event_id", nullable = true)
-    private Event event;
+	@Column(name = "upload_data")
+	private String data;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinTable(name = "relation_upload_product", joinColumns = {
-            @JoinColumn(name = "upload_id", nullable = false, updatable = false) },
-            inverseJoinColumns = { @JoinColumn(name = "product_id",
-                    nullable = false, updatable = false) })
-    private Set<Product> products;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "event_id", nullable = true)
+	private Event event;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id.upload", cascade = CascadeType.ALL)
-    private Set<Rating> ratings;
+	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinTable(name = "relation_upload_product", joinColumns = { @JoinColumn(name = "upload_id", nullable = false, updatable = false) }, inverseJoinColumns = { @JoinColumn(name = "product_id", nullable = false, updatable = false) })
+	private Set<Product> products;
 
-    @Column(name = "average_rating")
-    private double averageRating;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id.upload", cascade = CascadeType.ALL)
+	private Set<Rating> ratings;
 
-    public Upload(long id) {
-        this.id = id;
-    }
+	@Column(name = "average_rating")
+	private double averageRating;
 
-    public Upload() {
-    }
+	public Upload(long id) {
+		this.id = id;
+	}
 
-    public long getId() {
-        return id;
-    }
+	public Upload() {
+	}
 
-    public void setId(long id) {
-        this.id = id;
-    }
+	public long getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public Date getTime() {
-        return time;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setTime(Date time) {
-        this.time = time;
-    }
+	public Date getTime() {
+		return time;
+	}
 
-    public String getType() {
-        return type;
-    }
+	public void setTime(Date time) {
+		this.time = time;
+	}
 
-    public void setType(String type) {
-        this.type = type;
-    }
+	public String getType() {
+		return type;
+	}
 
-    public String getCategory() {
-        return category;
-    }
+	public void setType(String type) {
+		this.type = type;
+	}
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
+	public String getCategory() {
+		return category;
+	}
 
-    public String getPath() {
-        return path;
-    }
+	public void setCategory(String category) {
+		this.category = category;
+	}
 
-    public void setPath(String path) {
-        this.path = path;
-    }
+	public String getPath() {
+		return path;
+	}
 
-    public Event getEvent() {
-        return event;
-    }
+	public void setPath(String path) {
+		this.path = path;
+	}
 
-    public void setEvent(Event event) {
-        this.event = event;
-    }
+	public String getData() {
+		return data;
+	}
 
-    public Set<Product> getProducts() {
-        return products;
-    }
+	public void setData(String data) {
+		this.data = data;
+	}
 
-    public void setProducts(Set<Product> products) {
-        this.products = products;
-    }
+	public Event getEvent() {
+		return event;
+	}
 
-    public Set<Rating> getRatings() {
-        return ratings;
-    }
+	public void setEvent(Event event) {
+		this.event = event;
+	}
 
-    public void setRatings(Set<Rating> ratings) {
-        this.ratings = ratings;
-    }
+	public Set<Product> getProducts() {
+		return products;
+	}
 
-    public double getAverageRating() {
-        return averageRating;
-    }
+	public void setProducts(Set<Product> products) {
+		this.products = products;
+	}
 
-    public void setAverageRating(double averageRating) {
-        this.averageRating = averageRating;
-    }
+	public Set<Rating> getRatings() {
+		return ratings;
+	}
+
+	public void setRatings(Set<Rating> ratings) {
+		this.ratings = ratings;
+	}
+
+	public double getAverageRating() {
+		return averageRating;
+	}
+
+	public void setAverageRating(double averageRating) {
+		this.averageRating = averageRating;
+	}
 
 }

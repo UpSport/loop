@@ -1,0 +1,201 @@
+22:07:10.875 [main] INFO  main - Configuring Server
+22:07:11.001 [main] INFO  main - Creating Server
+22:07:14.821 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:07:16.465 [main] INFO  main - Starting Server
+22:07:16.793 [main] INFO  main - Server Started at => http://localhost:1979/api
+22:23:07.466 [main] INFO  main - Configuring Server
+22:23:07.687 [main] INFO  main - Creating Server
+22:23:08.526 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:23:08.976 [main] INFO  main - Starting Server
+22:23:09.097 [main] INFO  main - Server Started at => http://localhost:65379/api
+22:26:46.114 [main] INFO  main - Configuring Server
+22:26:46.118 [main] INFO  main - Creating Server
+22:26:47.142 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:26:47.450 [main] INFO  main - Starting Server
+22:26:47.508 [main] INFO  main - Server Started at => http://localhost:1979/api
+22:26:51.695 [Thread-2] INFO  main - Stopping Server
+22:26:56.059 [main] INFO  main - Configuring Server
+22:26:56.063 [main] INFO  main - Creating Server
+22:26:57.258 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:26:57.671 [main] INFO  main - Starting Server
+22:26:57.735 [main] INFO  main - Server Started at => http://localhost:1979/api
+22:28:54.239 [main] INFO  main - Configuring Server
+22:28:54.259 [main] INFO  main - Creating Server
+22:28:55.526 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:28:55.906 [main] INFO  main - Starting Server
+22:28:55.975 [main] INFO  main - Server Started at => http://localhost:1979/api
+22:34:26.047 [main] INFO  main - Configuring Server
+22:34:26.063 [main] INFO  main - Creating Server
+22:34:28.436 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:34:29.114 [main] INFO  main - Starting Server
+22:34:29.199 [main] INFO  main - Server Started at => http://localhost:1979/api
+22:36:34.415 [main] INFO  main - Configuring Server
+22:36:34.419 [main] INFO  main - Creating Server
+22:36:35.785 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:36:36.181 [main] INFO  main - Starting Server
+22:36:36.258 [main] INFO  main - Server Started at => http://localhost:1979/api
+22:44:30.691 [main] INFO  main - Configuring Server
+22:44:30.696 [main] INFO  main - Creating Server
+22:44:32.077 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:44:32.544 [main] INFO  main - Starting Server
+22:44:32.610 [main] INFO  main - Server Started at => http://localhost:1979/api
+22:47:33.383 [main] INFO  main - Configuring Server
+22:47:33.841 [main] INFO  main - Creating Server
+22:47:35.545 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:47:36.244 [main] INFO  main - Starting Server
+22:47:36.337 [main] INFO  main - Server Started at => http://localhost:65475/api
+22:54:08.559 [main] INFO  main - Configuring Server
+22:54:08.584 [main] INFO  main - Creating Server
+22:55:02.650 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:55:03.344 [main] INFO  main - Starting Server
+22:55:03.424 [main] INFO  main - Server Started at => http://localhost:1979/api
+22:57:29.468 [grizzly-http-server-0] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.2.Final}
+22:57:29.523 [grizzly-http-server-0] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+22:57:29.526 [grizzly-http-server-0] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+22:57:31.140 [grizzly-http-server-0] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.0.Final}
+22:57:31.307 [grizzly-http-server-0] WARN  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+22:57:31.348 [grizzly-http-server-0] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://162.216.17.47:3306/loop]
+22:57:31.367 [grizzly-http-server-0] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000046: Connection properties: {user=root, password=****}
+22:57:31.367 [grizzly-http-server-0] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000006: Autocommit mode: false
+22:57:31.369 [grizzly-http-server-0] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 5 (min=1)
+22:57:32.177 [grizzly-http-server-0] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+22:57:32.864 [grizzly-http-server-0] WARN  org.hibernate.mapping.RootClass - HHH000038: Composite-id class does not override equals(): upsport.loop.model.RatingId
+22:57:32.864 [grizzly-http-server-0] WARN  org.hibernate.mapping.RootClass - HHH000039: Composite-id class does not override hashCode(): upsport.loop.model.RatingId
+22:58:28.859 [main] INFO  main - Configuring Server
+22:58:29.208 [main] INFO  main - Creating Server
+22:58:30.806 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+22:58:31.527 [main] INFO  main - Starting Server
+22:58:31.636 [main] INFO  main - Server Started at => http://localhost:65517/api
+23:03:22.861 [main] INFO  main - Configuring Server
+23:03:23.190 [main] INFO  main - Creating Server
+23:03:24.599 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:03:25.270 [main] INFO  main - Starting Server
+23:03:25.386 [main] INFO  main - Server Started at => http://localhost:65532/api
+23:11:41.720 [main] INFO  main - Configuring Server
+23:11:42.237 [main] INFO  main - Creating Server
+23:11:43.837 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:11:44.451 [main] INFO  main - Starting Server
+23:11:44.540 [main] INFO  main - Server Started at => http://localhost:49188/api
+23:13:29.767 [main] INFO  main - Configuring Server
+23:13:30.039 [main] INFO  main - Creating Server
+23:13:31.098 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:13:31.495 [main] INFO  main - Starting Server
+23:13:31.615 [main] INFO  main - Server Started at => http://localhost:49191/api
+23:17:42.169 [main] INFO  main - Configuring Server
+23:17:42.561 [main] INFO  main - Creating Server
+23:17:44.117 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:17:44.846 [main] INFO  main - Starting Server
+23:17:44.972 [main] INFO  main - Server Started at => http://localhost:49232/api
+23:19:51.103 [main] INFO  main - Configuring Server
+23:19:51.370 [main] INFO  main - Creating Server
+23:19:52.438 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:19:52.909 [main] INFO  main - Starting Server
+23:19:53.032 [main] INFO  main - Server Started at => http://localhost:49249/api
+23:27:07.605 [main] INFO  main - Configuring Server
+23:27:08.475 [main] INFO  main - Creating Server
+23:27:10.833 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:27:11.850 [main] INFO  main - Starting Server
+23:27:11.966 [main] INFO  main - Server Started at => http://localhost:49731/api
+23:28:30.790 [main] INFO  main - Configuring Server
+23:28:30.800 [main] INFO  main - Creating Server
+23:28:36.591 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:28:37.516 [main] INFO  main - Starting Server
+23:28:37.603 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:29:48.530 [main] INFO  main - Configuring Server
+23:29:48.548 [main] INFO  main - Creating Server
+23:29:49.633 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:29:49.965 [main] INFO  main - Starting Server
+23:29:50.016 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:29:55.334 [Thread-2] INFO  main - Stopping Server
+23:30:00.141 [main] INFO  main - Configuring Server
+23:30:00.145 [main] INFO  main - Creating Server
+23:30:06.722 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:30:07.089 [main] INFO  main - Starting Server
+23:30:07.170 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:30:52.151 [main] INFO  main - Configuring Server
+23:30:52.162 [main] INFO  main - Creating Server
+23:30:59.714 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:31:00.133 [main] INFO  main - Starting Server
+23:31:00.220 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:31:27.656 [main] INFO  main - Configuring Server
+23:31:27.961 [main] INFO  main - Creating Server
+23:31:29.102 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:31:29.635 [main] INFO  main - Starting Server
+23:31:29.787 [main] INFO  main - Server Started at => http://localhost:49761/api
+23:32:16.160 [main] INFO  main - Configuring Server
+23:32:16.178 [main] INFO  main - Creating Server
+23:32:27.082 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:32:27.448 [main] INFO  main - Starting Server
+23:32:27.521 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:33:02.790 [main] INFO  main - Configuring Server
+23:33:02.793 [main] INFO  main - Creating Server
+23:33:03.711 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:33:04.019 [main] INFO  main - Starting Server
+23:33:04.066 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:33:09.801 [Thread-2] INFO  main - Stopping Server
+23:33:14.939 [main] INFO  main - Configuring Server
+23:33:14.943 [main] INFO  main - Creating Server
+23:33:16.067 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:33:16.454 [main] INFO  main - Starting Server
+23:33:16.511 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:33:31.433 [main] INFO  main - Configuring Server
+23:33:31.437 [main] INFO  main - Creating Server
+23:33:37.118 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:33:37.547 [main] INFO  main - Starting Server
+23:33:37.641 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:34:23.333 [main] INFO  main - Configuring Server
+23:34:23.337 [main] INFO  main - Creating Server
+23:34:35.268 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:34:35.648 [main] INFO  main - Starting Server
+23:34:35.732 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:37:23.254 [main] INFO  main - Configuring Server
+23:37:23.280 [main] INFO  main - Creating Server
+23:37:24.609 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:37:24.949 [main] INFO  main - Starting Server
+23:37:25.005 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:37:59.093 [main] INFO  main - Configuring Server
+23:37:59.097 [main] INFO  main - Creating Server
+23:38:00.376 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:38:00.799 [main] INFO  main - Starting Server
+23:38:00.884 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:40:44.711 [main] INFO  main - Configuring Server
+23:40:44.745 [main] INFO  main - Creating Server
+23:40:47.996 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:40:48.900 [main] INFO  main - Starting Server
+23:40:48.970 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:44:46.274 [main] INFO  main - Configuring Server
+23:44:46.289 [main] INFO  main - Creating Server
+23:45:16.169 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:45:16.946 [main] INFO  main - Starting Server
+23:45:17.038 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:46:16.379 [main] INFO  main - Configuring Server
+23:46:16.800 [main] INFO  main - Creating Server
+23:46:18.625 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:46:19.342 [main] INFO  main - Starting Server
+23:46:19.466 [main] INFO  main - Server Started at => http://localhost:49855/api
+23:47:37.105 [main] INFO  main - Configuring Server
+23:47:37.131 [main] INFO  main - Creating Server
+23:47:53.789 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:47:54.231 [main] INFO  main - Starting Server
+23:47:54.313 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:57:22.807 [main] INFO  main - Configuring Server
+23:57:22.811 [main] INFO  main - Creating Server
+23:57:34.064 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:57:34.485 [main] INFO  main - Starting Server
+23:57:34.574 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:59:01.383 [main] INFO  main - Configuring Server
+23:59:01.747 [main] INFO  main - Creating Server
+23:59:03.284 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:59:03.948 [main] INFO  main - Starting Server
+23:59:04.086 [main] INFO  main - Server Started at => http://localhost:49918/api
+23:59:23.577 [main] INFO  main - Configuring Server
+23:59:23.581 [main] INFO  main - Creating Server
+23:59:24.842 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:59:25.261 [main] INFO  main - Starting Server
+23:59:25.326 [main] INFO  main - Server Started at => http://localhost:1979/api
+23:59:34.245 [Thread-2] INFO  main - Stopping Server
+23:59:42.418 [main] INFO  main - Configuring Server
+23:59:42.422 [main] INFO  main - Creating Server
+23:59:48.263 [main] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.1.2.Final
+23:59:48.648 [main] INFO  main - Starting Server
+23:59:48.721 [main] INFO  main - Server Started at => http://localhost:1979/api
