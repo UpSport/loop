@@ -3,5 +3,4 @@
 .checkstyle
 .settings/
 target/
-
-*.log
+.log
