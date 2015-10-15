@@ -2,13 +2,15 @@
 UpSport backend
 
 - new user
-
 curl -v -H "Content-Type: application/json" -X POST -d "{\"name\":\"UpSport\", \"password\":\"password\", \"email\": \"local.part@domain.part\"}" http://localhost:1979/users/create
 
-- get all users
+- new upload see project admin under upsport
 
+- get all
 http://localhost:1979/users
+http://localhost:1979/uploads
 
+Developer notes:
 As the project using HK2 as dependency injection framework, to debug in Eclipse, setup maven to use jar instead of workspace project as dependency is important.
 
 http://stackoverflow.com/questions/2243722/m2eclipse-maven-dependencies-as-jars-not-projects
