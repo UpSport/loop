@@ -57,8 +57,8 @@ public class Main {
 
 		server.getListener("grizzly").getFileCache().setEnabled(false);
 
-		server.getServerConfiguration().addHttpHandler(
-				new StaticHttpHandler("/Users/mingtaozhang/admin"), "/page");
+		//server.getServerConfiguration().addHttpHandler(
+				//new StaticHttpHandler("/Users/mingtaozhang/admin"), "/page");
 
 		try {
 			LOG.info("Starting Server");
