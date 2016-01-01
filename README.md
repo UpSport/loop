@@ -16,4 +16,11 @@ Developer notes:
 http://stackoverflow.com/questions/2243722/m2eclipse-maven-dependencies-as-jars-not-projects
 "Right click on the project, choose Properties, select Maven, and uncheck the 'Resolve dependencies from Workspace projects'"
 
-2. TODO: There is a hard-coded mount static directory to grizzly in Main.java. To serve admin pages using same origin, change the directory manually.
+2. Deployment: 
+```
+mvn clean install
+cd app/web/web-rest/target
+tar xvf web-rest-1.0-SNAPSHOT-bin.tar.gz
+cd web-rest-1.0-SNAPSHOT/bin
+./start.sh <--admin path-->
+```
