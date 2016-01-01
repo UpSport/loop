@@ -23,7 +23,8 @@ public class Main {
 	private static final Logger LOG = LoggerFactory.getLogger("main");
 
 	// Base URI the Grizzly HTTP server will listen on
-	public static final String BASE_URI = "http://localhost:1979";
+	public static final int PORT = 1979;
+	public static final String BASE_URI = "http://0.0.0.0:" + PORT;
 
 	public static void main(String[] args) throws Exception {
 		new Main(false).startServer(args);
@@ -43,14 +44,8 @@ public class Main {
 	public void startServer(String[] args) {
 		LOG.info("Configuring Server");
 
-		URI uri;
-		// if we are in test mode then use the first available port otherwise
-		// use the port specified in the base uri.
-		if (isDevMode) {
-			uri = fromUri(BASE_URI).port(0).build();
-		} else {
-			uri = create(BASE_URI);
-		}
+		URI uri = create(BASE_URI);
+
 		LOG.info("Creating Server");
 		// create an instance of grizzly http server
 		server = createHttpServer(uri, new ApiApplication());
@@ -67,9 +62,9 @@ public class Main {
 
 			// for display purpose get the port used to start the server. this
 			// is necessary in case we're using a random port
-			int port = server.getListeners().stream().findFirst().get()
-					.getPort();
-			LOG.info("Server Started at => {}", fromUri(BASE_URI).port(port)
+//			int port = server.getListeners().stream().findFirst().get()
+//					.getPort();
+			LOG.info("Server Started at => {}", fromUri(BASE_URI).port(PORT)
 					.build());
 
 			GrizzlyHttpContainer handler = server.getServerConfiguration()
