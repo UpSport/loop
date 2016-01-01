@@ -38,10 +38,7 @@ while getopts ":d" opt; do
 done
 
 if [ "$DAEMON" = true ] ; then
-    nohup $JAVA -jar $app_jar
+    nohup $JAVA -jar $app_jar $1
 else
-    $JAVA -jar $app_jar
+    $JAVA -jar $app_jar $1
 fi
-
-
-

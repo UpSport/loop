@@ -52,18 +52,18 @@ public class Main {
 
 		server.getListener("grizzly").getFileCache().setEnabled(false);
 
-		//server.getServerConfiguration().addHttpHandler(
-				//new StaticHttpHandler("/Users/mingtaozhang/admin"), "/page");
+		if (args != null && args.length > 0) {
+			String adminPath = args[0];
+			LOG.info("Admin Path => {}", adminPath);
+			server.getServerConfiguration().addHttpHandler(
+					new StaticHttpHandler(adminPath), "/page");
+		}
 
 		try {
 			LOG.info("Starting Server");
 			// start the grizzly http server
 			server.start();
 
-			// for display purpose get the port used to start the server. this
-			// is necessary in case we're using a random port
-//			int port = server.getListeners().stream().findFirst().get()
-//					.getPort();
 			LOG.info("Server Started at => {}", fromUri(BASE_URI).port(PORT)
 					.build());
 
